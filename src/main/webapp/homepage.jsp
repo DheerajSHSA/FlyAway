@@ -23,11 +23,12 @@
 			</a>
 
 			<ul class="nav nav-pills">
-				<li class="nav-item"><a href="#" class="nav-link active"
+				<li class="nav-item"><a href="homepage.jsp" class="nav-link active"
 					aria-current="page">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Sign up</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Book a
+				<li class="nav-item"><a href="login.jsp" class="nav-link">Login</a></li>
+				<li class="nav-item"><a href="signup.jsp" class="nav-link">Sign
+						up</a></li>
+				<li class="nav-item"><a href="book.jsp" class="nav-link">Book a
 						Flight</a></li>
 			</ul>
 		</header>
