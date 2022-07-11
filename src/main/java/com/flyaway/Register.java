@@ -21,13 +21,27 @@ public class Register extends HttpServlet {
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
 		String pass = request.getParameter("pwd");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
+
 		Dao dao = new Dao();
-		
-		if(dao.register(uname, fname, lname, pass)==true)
-		{
-			out.println("Account Creation Successful");
+
+		if (dao.register(uname, fname, lname, pass) == true) {
+			out.println("<html>");
+			out.println("<head>");
+			out.println("<title>Registration Successful</title>");
+			out.println("<link\r\n"
+					+ "	href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\"\r\n"
+					+ "	rel=\"stylesheet\"\r\n"
+					+ "	integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\"\r\n"
+					+ "	crossorigin=\"anonymous\">");
+			out.println("</head>");
+			out.println("<body>");
+			out.print("<div class=\"alert alert-success\">");
+			out.println("<strong>Success!</strong> Your Account was Created");
+			out.println("</div>");
+			out.println("</body>");
+			out.println("</html>");
 		}
 	}
 }
